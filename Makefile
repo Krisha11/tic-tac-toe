@@ -1,8 +1,8 @@
 flags = -Werror -Wall -Wextra -Wpedantic
-all: hw_02
+all: game
 
-hw_02: obj/ obj/Board.o obj/StdioBoardView.o obj/NcursesBoardView.o obj/main.o
-	g++ obj/Board.o obj/StdioBoardView.o obj/NcursesBoardView.o obj/main.o -o hw_02 -lncurses
+game: obj/ obj/Board.o obj/StdioBoardView.o obj/NcursesBoardView.o obj/main.o
+	g++ obj/Board.o obj/StdioBoardView.o obj/NcursesBoardView.o obj/main.o -o game -lncurses
 obj/Board.o:
 	g++ -c $(flags) src/Board.cpp -o obj/Board.o -I include/
 obj/StdioBoardView.o:
